@@ -1,20 +1,22 @@
-import java.util.Arrays;
+import java.util.HashSet;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 class Main {
     public static void main(String[] args){
-        int [] nums = {1,2,3,1};
+        int [] nums = {1,2,3,4};
 
         System.out.println(containsDuplicate(nums));
     }
 
     public static boolean containsDuplicate(int[] nums) {
-        Arrays.sort(nums);
-        for (int i =0; i < nums.length -1; i++){
-            if (nums[i] == nums[i+1]){
+        HashSet<Integer> set = new HashSet<>();
+
+        for (int num : nums){
+            if (set.contains(num)){
                 return true;
             }
+            set.add(num);
         }
 
         return false;
