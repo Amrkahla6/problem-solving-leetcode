@@ -16,11 +16,9 @@ class Main {
         for(int i = 0; i < letters.length; i++){
             if (letters[i] > target){
                 return letters[i];
-            }else if (i == letters.length - 1){
-                return letters[0];
             }
         }
 
-        return target;
+        return letters[0];
     }
 }
