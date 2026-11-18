@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -5,9 +7,15 @@ import java.util.Stack;
 class Main {
     public static void main(String[] args){
 
-        String s = "axc";
-        String t = "ahbgdc";
-        System.out.println(isSubsequence(s,t));
+        Map<String,Integer> map = new HashMap<>();
+
+        String key = "java";
+        map.put(key,100);
+
+        key = key + "developer";
+
+        System.out.println(map.get(key));
+        System.out.println(map.get("java"));
     }
 
     public static boolean isSubsequence(String s, String t) {
